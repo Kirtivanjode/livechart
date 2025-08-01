@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  gap: 5px;
+}
+
+.sidebar-wrapper {
+  width: 240px;
+  background-color: #1f2937;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  border-bottom-right-radius: 26px;
+  border-top-right-radius: 26px;
+}
+
+.layout-wrapper.collapsed .sidebar-wrapper {
+  width: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.router-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  background: #f0f2f5;
+  padding: 14px;
+  height: fit-content;
+}

@@ -1,0 +1,34 @@
+<div class="chart-wrapper">
+  <button class="back-button" (click)="goBack()">← Back to Dashboard</button>
+
+  <div class="chart-type-switch">
+    <label for="chartType">Chart Type:</label>
+    <select [(ngModel)]="chartType" (change)="onChartTypeChange(chartType)">
+      <option value="line">📈 Line</option>
+      <option value="bar">📊 Bar</option>
+    </select>
+  </div>
+
+  <ng-container *ngIf="showChart">
+    <div [@fadeSlide]>
+      <canvasjs-chart
+        [options]="chartOptions"
+        (chartInstance)="onChartInstance($event)"
+        class="chart"
+      ></canvasjs-chart>
+    </div>
+  </ng-container>
+
+  <div class="cards-container">
+    <div *ngFor="let sub of subVars" class="value-card">
+      <div
+        class="card-top-line"
+        [ngStyle]="{ 'background-color': getColorFromChart(sub.name) }"
+      ></div>
+      <h4>{{ sub.name }}</h4>
+      <p class="value" [ngStyle]="{ color: getColorFromChart(sub.name) }">
+        {{ sub.latestY ? sub.latestY.toFixed(2) : "N/A" }}
+      </p>
+    </div>
+  </div>
+</div>

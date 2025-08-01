@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidebar.emit()" class="btn">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolbar-title">📊 Live Dashboard</span>
+  <span class="spacer"></span>
+
+  <span *ngIf="lastUpdate && showTimestamp">
+    Last Timestamp: {{ lastUpdate | date : "mediumTime" }}
+  </span>
+</mat-toolbar>

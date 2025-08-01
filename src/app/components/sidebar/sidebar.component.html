@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="livechart.png" alt="Logo" class="logo" />
+    <h2 *ngIf="!collapsed">LiveBoard</h2>
+  </div>
+
+  <div class="sidebar-content">
+    <div
+      class="sidebar-item"
+      routerLink="/dashboard"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [class.collapsed]="collapsed"
+    >
+      <mat-icon>dashboard</mat-icon>
+      <span *ngIf="!collapsed">Dashboard</span>
+    </div>
+
+    <div
+      class="sidebar-item"
+      routerLink="/report"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [class.collapsed]="collapsed"
+    >
+      <mat-icon>report</mat-icon>
+      <span *ngIf="!collapsed">Details Reports</span>
+    </div>
+  </div>
+  <button (click)="logout()" class="sidebar-item logout-button">
+    <mat-icon>logout</mat-icon>
+    <span *ngIf="!collapsed">Logout</span>
+  </button>
+</div>

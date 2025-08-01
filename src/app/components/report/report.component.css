@@ -1,0 +1,145 @@
+.report-container {
+  height: 82vh;
+  overflow-y: auto; /* Make full content scrollable */
+  padding: 40px;
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  color: white;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.filter-section,
+.export-button {
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Just horizontal scroll for large tables */
+  border-radius: 10px;
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.report-header mat-icon {
+  color: #b6a0ff;
+  font-size: 28px;
+}
+
+.report-header h2 {
+  color: #b6a0ff;
+  font-size: 24px;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+mat-form-field {
+  width: 200px;
+  background-color: #291f4a;
+  border-radius: 6px;
+}
+
+mat-label,
+.mat-select-value,
+.mat-datepicker-toggle,
+input.mat-input-element {
+  color: #000 !important;
+}
+
+/* Buttons */
+button[mat-raised-button] {
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+button[color="primary"] {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+button[color="primary"]:hover {
+  background-color: #4e44c4;
+}
+
+button[color="accent"] {
+  background-color: #b388ff;
+  color: #fff;
+}
+
+button[color="accent"]:hover {
+  background-color: #a16eff;
+}
+
+/* Table Styling */
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table.dataTable {
+  width: 100% !important;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table.dataTable th {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+table.dataTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #2c2c49;
+  color: white;
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #666;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: #2c2c49 !important;
+  color: white !important;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #6c5ce7 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  mat-form-field,
+  button {
+    width: 100%;
+  }
+}

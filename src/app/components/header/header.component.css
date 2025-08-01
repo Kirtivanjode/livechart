@@ -1,0 +1,33 @@
+mat-toolbar {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 20px;
+}
+
+.toolbar-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 12px;
+  color: #ffffff;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-icon {
+  color: #f8fafc;
+}
+
+.btn {
+  background-color: burlywood;
+  border: none;
+  cursor: pointer;
+}
