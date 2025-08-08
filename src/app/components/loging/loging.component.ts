@@ -19,7 +19,7 @@ export class LogingComponent {
   login(): void {
     if (this.email === 'admin@company.com' && this.password === '12345') {
       this.errorMsg = '';
-      this.router.navigate(['/dashboard']); // Change route if needed
+      this.router.navigate(['/dashboard']);
     } else {
       this.errorMsg = 'Invalid email or password';
     }
