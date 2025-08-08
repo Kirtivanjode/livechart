@@ -27,6 +27,9 @@ import { filter } from 'rxjs';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   isLoginPage = false;
   sidebarCollapsed = false;
 

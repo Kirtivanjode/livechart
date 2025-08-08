@@ -342,7 +342,7 @@ export class ChartComponent {
   }
 
   goBack(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 
   onChartTypeChange(type: string) {

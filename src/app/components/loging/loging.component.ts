@@ -18,6 +18,7 @@ export class LogingComponent {
 
   login(): void {
     if (this.email === 'admin@company.com' && this.password === '12345') {
+      localStorage.setItem('loggedIn', 'true'); // <-- match guard key
       this.errorMsg = '';
       this.router.navigate(['/dashboard']);
     } else {
